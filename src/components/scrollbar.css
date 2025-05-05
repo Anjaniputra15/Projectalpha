@@ -1,0 +1,92 @@
+/* Custom Scrollbar Styling for R&D Platform */
+
+/* Apply to all elements */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #4c1d95 #1e1e1e;
+  }
+  
+  body {
+    overflow-y: scroll; /* Always show vertical scrollbar to prevent layout shifts */
+    background-color: #1e1e1e;
+  }
+  
+  /* Custom scrollbar for the entire application */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4c1d95;
+    border-radius: 4px;
+    border: 2px solid #1e1e1e;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #6d28d9;
+  }
+  
+  /* For horizontal scrollbars */
+  ::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 4px;
+  }
+  
+  /* For the corner where vertical and horizontal scrollbars meet */
+  ::-webkit-scrollbar-corner {
+    background: #1e1e1e;
+  }
+  
+  /* Custom class for elements that need scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #4c1d95 #1e1e1e;
+  }
+  
+  /* Apply scrollbar to the entire app */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4c1d95;
+    border-radius: 4px;
+    border: 2px solid #1e1e1e;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #6d28d9;
+  }
+  
+  /* For containers with a fixed height that need scrolling */
+  .scrollable-content {
+    overflow-y: auto;
+  }
+  
+  /* For specific components that need a scrollbar with max height */
+  .scrollable-container {
+    overflow-y: auto;
+    max-height: 80vh;
+    scrollbar-width: thin;
+    scrollbar-color: #4c1d95 #1e1e1e;
+  }
+  
+  /* Optional: Hide scrollbar but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }

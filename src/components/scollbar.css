@@ -1,0 +1,31 @@
+/* Custom scrollbar styles */
+.custom-scrollbar {
+    /* Ensure the container enables scrolling */
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #8b5cf6 #2a2a2a; /* For Firefox */
+  }
+  
+  /* Webkit browsers (Chrome, Safari, newer versions of Opera) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #2a2a2a; /* Color of the track */
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #8b5cf6; /* Color of the scroll thumb */
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9f7aea; /* Color of the scroll thumb on hover */
+  }
+  
+  /* Setting max-height to ensure scrolling is enabled */
+  .scrollable-content {
+    max-height: calc(100vh - 60px); /* Adjust based on header/footer height */
+  }

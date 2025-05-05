@@ -1,0 +1,132 @@
+/* styles/terminal-output.css */
+.terminal-output {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    margin: 16px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .terminal-content {
+    width: 100%;
+  }
+  
+  .terminal-line {
+    min-height: 20px;
+    padding: 1px 0;
+  }
+  
+  /* Text highlighting styles */
+  .terminal-test-header {
+    color: #a5b4fc;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .terminal-test-type {
+    color: #93c5fd;
+    font-weight: bold;
+  }
+  
+  .terminal-statistic {
+    color: #22d3ee;
+    font-weight: bold;
+  }
+  
+  .terminal-p-value {
+    color: #f472b6;
+    font-weight: bold;
+  }
+  
+  .terminal-combined {
+    color: #a5b4fc;
+    font-weight: bold;
+  }
+  
+  .terminal-warning {
+    color: #fbbf24;
+    font-weight: bold;
+  }
+  
+  .terminal-action {
+    color: #a78bfa;
+    font-weight: bold;
+  }
+  
+  /* Terminal summary table */
+  .terminal-summary {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 16px;
+  }
+  
+  .terminal-summary-header {
+    color: #a5b4fc;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .terminal-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+  }
+  
+  .terminal-summary-table th {
+    background-color: #2a2a2a;
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+  }
+  
+  .terminal-summary-table td {
+    padding: 6px 12px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .terminal-summary-table tr:hover {
+    background-color: #222;
+  }
+  
+  /* Blink animation for cursor */
+  @keyframes terminal-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .terminal-output.active::after {
+    content: "█";
+    display: inline-block;
+    animation: terminal-blink 1s infinite;
+    color: #a5b4fc;
+  }
+  
+  /* Styling for ongoing validation */
+  .terminal-output.validating {
+    position: relative;
+  }
+  
+  .terminal-output.validating::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    animation: loading 2s infinite ease-in-out;
+    width: 100%;
+  }
+  
+  @keyframes loading {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+  }
